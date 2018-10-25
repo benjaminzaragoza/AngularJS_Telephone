@@ -1,0 +1,62 @@
+﻿<html>
+<head>
+    <meta charset="utf-8">
+    <title>ngMessages Demo</title>
+
+    <!-- JS -->
+    <script src="//code.angularjs.org/1.4.0/angular.js"></script>
+    <script src="app.js"></script>
+</head>
+<body class="container" ng-app="app" ng-controller="MainCtrl as main">
+
+
+    <div ng-controller="mainController" layout-padding layout="column" ng-cloak="" ng-app="validationApp">
+
+        <md-card>
+            <md-toolbar class="md-toolbar-tools">
+                <h2 style="color:white">Registration Form</h2>
+            </md-toolbar>
+            <md-card-title>
+            </md-card-title>
+            <md-card-content>
+                <form name="userForm" novalidate>
+                    <div layout="column">
+                        <md-input-container>
+                            <label>Name</label>
+                            <input type="text" name="name" ng-model="user.name" required>
+                            <div ng-messages="userForm.name.$error">
+                                <div ng-message="required">
+                                    You name is required.
+                                </div>
+                            </div>
+                        </md-input-container>
+                        <md-input-container>
+                            <label>Username</label>
+                            <input type="text" name="username" ng-model="user.username" minlength="3" maxlength="8">
+                            <div ng-messages="userForm.username.$error">
+                                <div ng-message="minlength">Username is too short.</div>
+                                <div ng-message="maxlength">Username is too long.</div>
+                            </div>
+                        </md-input-container>
+                        <md-input-container>
+                            <label>Email</label>
+                            <input type="email" name="email" ng-model="user.email">
+                            <div ng-messages="userForm.email.$error">
+                                <div ng-message="userForm.email.$invalid">
+                                    Enter a valid email.
+                                </div>
+                            </div>
+                        </md-input-container>
+                    </div>
+                </form>
+                <md-card-content>
+                    <md-card-actions layout="row" layout-align="end center">
+                        <md-button ng-click="submitForm()" class="md-raised md-primary">Submit</md-button>
+                    </md-card-actions>
+        </md-card>
+       
+
+    </div>
+
+</body>
+</html>

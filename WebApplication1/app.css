@@ -1,0 +1,157 @@
+body {
+  padding: 20px;
+}
+h1 {
+  border-bottom: 1px solid gray;
+  margin-top: 0;
+}
+ .logo-image {
+   height: 100%;
+   width: 100%;
+ }
+ .md-button.logo {
+   height: 7rem;
+   width: 7rem;
+ }
+.png-icon{
+    margin: 5px auto auto;
+    padding: 0;
+    display: inline-block;
+    background-repeat: no-repeat no-repeat;
+    pointer-events: none;
+}
+/* View: Phone list */
+.phones {
+  list-style: none;
+}
+.boto {
+    border: transparent;
+    background: none;
+    margin-right: 710px
+}
+.phones li {
+  clear: both;
+  height: 115px;
+  padding-top: 15px;
+}
+
+.imageBoto {
+    height: 70px;
+}
+.thumb {
+  float: left;
+  height: 100px;
+  margin: -0.5em 1em 1.5em 0;
+  padding-bottom: 1em;
+  width: 100px;
+}
+
+/* View: Phone detail */
+.phone {
+  background-color: white;
+  display: none;
+  float: left;
+  height: 400px;
+  margin-bottom: 2em;
+  margin-right: 3em;
+  padding: 2em;
+  width: 400px;
+}
+
+.phone:first-child {
+  display: block;
+}
+
+.phone-images {
+  background-color: white;
+  float: left;
+  height: 450px;
+  overflow: hidden;
+  position: relative;
+  width: 450px;
+}
+
+.phone-thumbs {
+  list-style: none;
+  margin: 0;
+}
+
+.phone-thumbs img {
+  height: 100px;
+  padding: 1em;
+  width: 100px;
+}
+
+.phone-thumbs li {
+  background-color: white;
+  border: 1px solid black;
+  cursor: pointer;
+  display: inline-block;
+  margin: 1em;
+}
+
+.specs {
+  clear: both;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.inputdemoIcons {
+  /*
+.right-icon {
+  position: absolute;
+  top: 4px;
+  right: 2px;
+  left: auto;
+  margin-top: 0;
+}
+*/ }
+  .inputdemoIcons .inputIconDemo {
+    min-height: 48px; }
+  .inputdemoIcons md-input-container:not(.md-input-invalid) > md-icon.email {
+    color: green; }
+  .inputdemoIcons md-input-container:not(.md-input-invalid) > md-icon.name {
+    color: dodgerblue; }
+  .inputdemoIcons md-input-container.md-input-invalid > md-icon.email,
+  .inputdemoIcons md-input-container.md-input-invalid > md-icon.name {
+    color: red; }
+.specs dt {
+  font-weight: bold;
+}
+
+.specs > li {
+  display: inline-block;
+  vertical-align: top;
+  width: 200px;
+}
+
+.specs > li > span {
+  font-size: 1.2em;
+  font-weight: bold;
+}
+
+.demo {
+    position: relative;
+    width: auto;
+    background-color: navy;
+    margin-top: 40px;
+    margin-left: 0px;
+    margin-bottom: 20px;
+    font-size : 12px;
+   color:white;
+}
+footer {
+    display: block;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    text-align: center;
+    background-color: #233237;
+}
+.md-no-sticky {
+       color:darkgrey;
+        font-size : 14px;
+        margin-bottom: 20px;
+        margin-top: 90px;
+
+}

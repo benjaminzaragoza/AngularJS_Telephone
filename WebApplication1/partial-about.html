@@ -1,0 +1,48 @@
+﻿<body ng-app='miapp' ng-controller='micontrolador'>
+
+    <div layout='column' layout-align="center center" class='md-display-1'>{{ titulo }}</div>
+    <div layout='column' layout-align='center center'>{{parrafo}}</div>
+    <div layout='column' layout-align='center center'>
+        <div layout='row' layout-padding>
+            <md-input-container>
+                <label>Nom</label>
+                <md-icon>person</md-icon>
+                <input type='text' required name="nom" ng-model='new.nombre'>
+            </md-input-container>
+            <md-input-container>
+                <label>Edat</label>
+                <input type='number' required ng-model='new.edad'>
+            </md-input-container>
+            <md-input-container>
+                <label>Genere</label>
+                <md-select required ng-model="new.genero">
+                    <md-option ng-repeat="gen in generos" ng-value="gen.genero">
+                        {{gen.genero}}
+                    </md-option>
+                </md-select>
+            </md-input-container>
+            <md-button ng-click='cancel()' ng-disabled='btcancel()' class="md-fab md-mini md-primary"><md-icon>cancel</md-icon></md-button>
+            <md-button ng-click='guardar(new)' ng-disabled='new.nombre.$invalid' class="md-fab md-mini md-primary"><md-icon>save</md-icon></md-button>
+        </div>
+    </div>
+    <div layout='column' layout-align='center center'>
+        <md-input-container>
+            <md-icon class='warm'>person</md-icon>
+            <label>Filtre</label>
+            <input ng-model="filtro">
+        </md-input-container>
+        <table>
+            <tr>
+                <th>Nom</th>
+                <th>Edat</th>
+                <th>Genere</th>
+                <th></th>
+            </tr>
+            <tr ng-repeat='amigo in amigos | filter: filtro'>
+                <td>{{amigo.nombre}}</td>
+                <td>{{amigo.edad}}</td>
+                <td>{{amigo.genero}}</td>
+                <td><md-button ng-click='editar(amigo)' class="md-fab md-mini md-raised"><md-icon>edit</md-icon></md-button><md-button ng-click='borrar(amigo)' class="md-fab md-mini md-warn"><md-icon>delete</md-icon></md-button></td>
+        </table>
+
+    </div>

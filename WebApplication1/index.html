@@ -1,0 +1,108 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <!-- CSS (load bootstrap) -->
+
+    <link rel="stylesheet" href="app.css" />
+    <link rel="stylesheet" href="app.animations.css" />
+    <link rel="stylesheet" href="Content/angular-material.css"/>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <style>
+
+    </style>
+
+    <!-- JS (load angular, ui-router, and our custom js file) -->
+    <script src="Scripts/angular.js"></script>
+    <script src="http://unpkg.com/@uirouter/angularjs/release/angular-ui-router.min.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.4.0/angular-messages.js"></script>
+    <script src="core/checkmark.filter.js"></script>
+    <script src="Scripts/angular-animate.min.js"></script>
+    <script src="Scripts/angular-material.js"></script>
+    <script src="app.js"></script>
+    <script src="app.animations.js"></script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular-aria.min.js"></script>
+
+
+</head>
+<!-------------------------------------------------------------------->
+
+<body ng-app="routerApp">
+
+    <!--Menu de navegacio -->
+    <div ng-controller="menu" layout="column" ng-cloak>
+        <md-toolbar class="md-hue-2">
+            <div class="md-toolbar-tools">
+                <md-button class="md-icon-button" aria-label="Settings" ng-click="toggleLeft()">
+                    <md-icon md-font-set="material-icons">menu</md-icon>
+                </md-button>
+                <h2>
+                    <span>Telephone List</span>
+                </h2>
+                <span flex></span>
+
+                <md-button class="md-icon-button" aria-label="Favorite">
+                    <md-icon md-font-set="material-icons">more_vert</md-icon>
+                </md-button>
+            </div>
+        </md-toolbar>
+
+
+            <md-sidenav class="md-sidenav-left md-whiteframe-z2"
+                        md-component-id="left">
+                <md-toolbar class="md-tall md-hue-2" layout-align="end end">
+
+                    <div class="md-toolbar-tools">
+                        <img src="https://avatars2.githubusercontent.com/u/23049441?s=460&v=4" width="30" height="30" style="border-radius:50px;margin-right:10px" />
+                        <div layout="column">
+                            <span class="md-body-2">Benjamin Zaragoza</span>
+                        </div>
+                        <span flex></span>
+                        <md-button class="md-icon-button" aria-label="More">
+                            <md-icon>more_vert</md-icon>
+                        </md-button>
+                    </div>
+                </md-toolbar>
+
+
+                <md-content role="navigation">
+                    <md-list>
+                        <md-list-item ng-repeat="item in menu" ng-click="close()">
+                            <md-icon md-font-set="material-icons">{{item.icon}}</md-icon>
+                            <md-button ui-sref="{{item.state}}">{{item.name}}</md-button>
+                            <span flex></span>
+                            <md-icon>chevron_right</md-icon>
+                        </md-list-item>
+                        </md-list>
+                </md-content>
+
+
+
+            </md-sidenav>
+
+            <md-content flex layout-padding>
+                <div layout="column" layout-fill layout-align="top left">
+                    <div class="container">
+                        <div ui-view></div>
+                    </div>
+                </div>
+                <div flex></div>
+            </md-content>
+    </div>
+    
+    <!-- MAIN CONTENT -->
+    <!-- Contenidor vaix el menu -->
+    
+
+
+    <!-- Contenidor vaix (footer) -->
+    <footer style="color:#162593">
+        <md-toolbar class="md-scroll-shrink">
+            <div layout="row" layout-align="center center" flex>
+                <p>Aangular by Benjamin Zaragoza ... <a href="https://github.com/benjaminzaragoza" target="_blank">more info</a></p>
+            </div>
+        </md-toolbar>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,33 @@
+﻿<!-- partial-home.html -->
+
+<!-- text vaix manu-->
+<div class="jumbotron text-center">
+   
+    
+     <md-card style="margin-left: 100px; margin-right: 100px; margin-top: 30px; margin-bottom: 30px;">
+        <img ng-src="https://fuzzy.ink/stationery/wp-content/uploads/sites/3/2018/06/TOTB-social-media-IMG01.jpg" style="height:250px" class="md-card-image" alt="Washed Out">
+        <md-card-title>
+            <md-card-title-text>
+                <span class="md-headline">Benvigut ala nostra pagina amb Angular</span>
+            </md-card-title-text>
+            <md-button ui-sref=".list" class="md-icon-button logo" style="height: 80px; width: 80px;">
+                <img class="logo-image " src="/img/phone1.png">
+            </md-button>
+
+            <md-button ui-sref=".chat" class="md-icon-button logo" style="height: 80px; width: 80px;">
+                <img class="logo-image " src="/img/chat.png">
+            </md-button>
+
+        </md-card-title>
+        
+
+    <!--Enllassos dinte el contenidor-->
+   
+
+</div>
+<!--Mostrem el que volem mostrar , passat desde el app.js, "buit no passem res"-->
+<div ui-view="columnOne"></div>
+<div ui-view="columnTwo"></div>
+<div ui-view="chat"></div>
+<div ui-view="about"></div>
+
