@@ -1,11 +1,25 @@
-﻿<div>
-    <div class="phone-images">
+﻿<hr style="margin-top:5%;" />
+<div class="container">
+    <div class="decorative-title">
+        <div class="decorative-bar left vertical thick"></div>
+        <div class="decorative-bar left horizontal thick"></div>
+        <div class="decorative-bar left horizontal thin"></div>
+
+        <span>{{phone.name}}</span>
+
+        <div class="decorative-bar right vertical thick"></div>
+        <div class="decorative-bar right horizontal thick"></div>
+        <div class="decorative-bar right horizontal thin"></div>
+    </div>
+</div>
+
+
+<div>
+    <div class="phone-images" style="width: 22%;margin-right: 2%;height: 279px;margin-left: 56px;margin-bottom: 2%;margin-top: 1%;">
         <img ng-src="{{img}}" class="phone"
              ng-class="{selected: img === mainImageUrl}"
-             ng-repeat="img in phone.images" />
+             ng-repeat="img in phone.images" style="display: block;position: absolute;left: 0px;top: 22px;height: 60%;width: 80%;"/>
     </div>
-
-    <h1>{{phone.name}}</h1>
 
     <ul class="phone-thumbs">
         <li ng-repeat="img in phone.images">
@@ -13,12 +27,13 @@
         </li>
     </ul>
 
-    <ul class="specs">
+    <ul class="specs" style="margin-left: 2.8%;">
         <li>
             <span>Availability and Networks</span>
             <dl>
                 <dt>Availability</dt>
-                <dd ng-repeat="availability in phone.availability">{{availability}}</dd>
+                <dd ng-repeat="availability in phone.availability" style="
+                    margin -2px;margin-top 5px;">{{availability}}</dd>
             </dl>
         </li>
         <li>
@@ -46,16 +61,16 @@
             <dl>
                 <dt>Network Support</dt>
                 <dd>{{phone.connectivity.cell}}</dd>
-                <dt>WiFi</dt>
+            </dl>
+        </li>
+        <li>
+            <span>WiFi</span>
+            <dl>
+                <dt>Wifi Version</dt>
                 <dd>{{phone.connectivity.wifi}}</dd>
                 <dt>Bluetooth</dt>
                 <dd>{{phone.connectivity.bluetooth}}</dd>
-                <dt>Infrared</dt>
-                <dd>{{phone.connectivity.infrared | checkmark}}</dd>
-                <dt>GPS</dt>
-                <dd>{{phone.connectivity.gps | checkmark}}</dd>
             </dl>
-        </li>
         <li>
             <span>Android</span>
             <dl>
@@ -63,6 +78,10 @@
                 <dd>{{phone.android.os}}</dd>
                 <dt>UI</dt>
                 <dd>{{phone.android.ui}}</dd>
+                <dt>Infrared</dt>
+                <dd>{{phone.connectivity.infrared | checkmark}}</dd>
+                <!--<dt>GPS</dt>
+                <dd>{{phone.connectivity.gps | checkmark}}</dd>-->
             </dl>
         </li>
         <li>
