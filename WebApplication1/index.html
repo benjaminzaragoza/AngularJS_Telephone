@@ -24,6 +24,8 @@
 
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular-aria.min.js"></script>
 
+    <script src="//cdnjs.cloudflare.com/ajax/libs/angular-material-icons/0.7.1/angular-material-icons.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/SVG-Morpheus/0.3.2/svg-morpheus.js"></script>
 
 </head>
 <!-------------------------------------------------------------------->
@@ -38,7 +40,9 @@
                     <md-icon md-font-set="material-icons">menu</md-icon>
                 </md-button>
                 <h2>
-                    <span>Telephone List</span>
+                    
+                    <span style="margin-left: 30px;" >Telephone List</span>
+                    <md-icon md-font-set="material-icons">phone_iphone</md-icon>
                 </h2>
                 <span flex></span>
 
@@ -59,18 +63,16 @@
                             <span class="md-body-2">Benjamin Zaragoza</span>
                         </div>
                         <span flex></span>
-                        <md-button class="md-icon-button" aria-label="More">
-                            <md-icon>more_vert</md-icon>
-                        </md-button>
+                            <ng-md-icon icon="github-circle" style="fill: white" color="white" size="45"></ng-md-icon>
                     </div>
                 </md-toolbar>
 
 
                 <md-content role="navigation">
                     <md-list>
-                        <md-list-item ng-repeat="item in menu" ng-click="close()">
+                        <md-list-item ng-repeat="item in menu"  ui-sref="{{item.state}}" ng-click="close()">
                             <md-icon md-font-set="material-icons">{{item.icon}}</md-icon>
-                            <md-button ui-sref="{{item.state}}">{{item.name}}</md-button>
+                            <span class="md-body-2">{{item.name}}</span>
                             <span flex></span>
                             <md-icon>chevron_right</md-icon>
                         </md-list-item>
@@ -97,12 +99,12 @@
 
 
     <!-- Contenidor baix (footer) -->
-    <footer style="color:#162593">
+    <div style="color:#162593;" class="footer">
         <md-toolbar class="md-scroll-shrink">
             <div layout="row" layout-align="center center" flex>
                 <p>Aangular by Benjamin Zaragoza ... <a href="https://github.com/benjaminzaragoza" target="_blank">more info</a></p>
             </div>
         </md-toolbar>
-    </footer>
+    </div>
 </body>
 </html>

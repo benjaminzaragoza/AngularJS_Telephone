@@ -1,4 +1,4 @@
-﻿var routerApp = angular.module('routerApp', ['ngAnimate', 'ui.router', 'core', 'ngMaterial', 'ngMessages']);
+﻿var routerApp = angular.module('routerApp', ['ngAnimate', 'ui.router', 'core', 'ngMaterial', 'ngMessages','ngMdIcons']);
 
 routerApp.config(function ($stateProvider, $urlRouterProvider) {
 
@@ -880,10 +880,10 @@ routerApp.controller('menu', function ($scope, $timeout, $mdSidenav, $log) {
       $scope.toggleLeft = buildToggler('left');
   
       $scope.menu = [
-        { 'name': 'Home', 'icon': 'library_music', state: 'home' },
-        { 'name': 'About', 'icon': 'stars', state: 'about' },
-        { 'name': 'Formulari', 'icon': 'trending_up', state: 'form' },
-        { 'name': 'Formulari2', 'icon': 'search,', state: 'form2' }
+        { 'name': 'Home', 'icon': 'home', state: 'home' },
+        { 'name': 'Admin users', 'icon': 'face', state: 'about' },
+        { 'name': 'Formulari', 'icon': 'description', state: 'form' },
+        { 'name': 'Formulari 2', 'icon': 'description', state: 'form2' }
       ];
   
       $scope.close = function () {
@@ -913,11 +913,7 @@ routerApp.controller('micontrolador', function ($scope) {
     $scope.amigos = [
       { nombre: 'Jose', edad: 25, genero: 'Masculi' },
       { nombre: 'Angela', edad: 21, genero: 'Femeni' },
-      { nombre: 'Pedro', edad: 29, genero: 'Masculi' },
-      { nombre: 'Javier', edad: 20, genero: 'Masculi' },
-      { nombre: 'Andreina', edad: 19, genero: 'Femeni' },
-      { nombre: 'Jose Luis', edad: 26, genero: 'Masculi' },
-      { nombre: 'Juan', edad: 23, genero: 'Masculi' }
+      { nombre: 'Marinsan', edad: 29, genero: 'Masculi' }
     ];
 
     $scope.guardar = function (x) {
