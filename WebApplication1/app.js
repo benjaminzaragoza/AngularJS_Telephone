@@ -1,6 +1,6 @@
 ﻿var routerApp = angular.module('routerApp', ['ngAnimate', 'ui.router', 'core', 'ngMaterial', 'ngMessages','ngMdIcons']);
 
-routerApp.config(function ($stateProvider, $urlRouterProvider) {
+routerApp.config(function ($stateProvider, $urlRouterProvider,$mdDateLocaleProvider) {
 
     $urlRouterProvider.otherwise('/home');
 
@@ -71,6 +71,23 @@ routerApp.config(function ($stateProvider, $urlRouterProvider) {
             }
         });
 
+
+    // Example of a Spanish localization.
+    $mdDateLocaleProvider.days = ['Diumnege', 'Dilluns', 'Dimarts', 'Dimecres', 'Dijous', 'Divendres', 'Disapte'];
+
+    $mdDateLocaleProvider.months = ['Gener', 'Febrer', 'Març', 'Abril', 'Maig', 'Juny','Juliol','Agost','Setembre', 'Octubre', 'Noviembre', 'Desembre'];
+        $mdDateLocaleProvider.shortMonths = ['Gen', 'Feb', 'Mar', 'Abr', 'Mai', 'Jun', 
+                                        'Jul', 'Ago', 'Sep', 'Oct', 'Nov', 'Des'];
+        // Can change week display to start on Monday.
+        $mdDateLocaleProvider.firstDayOfWeek = 1;
+
+        $mdDateLocaleProvider.weekNumberFormatter = function(weekNumber) {
+            return 'Semana ' + weekNumber;
+        };
+        $mdDateLocaleProvider.msgCalendar = 'Calendari';
+        $mdDateLocaleProvider.msgOpenCalendar = 'Obri calendari';
+    
+
 });
 
 routerApp.controller('DemoCtrl', function ($scope) {
@@ -82,6 +99,22 @@ routerApp.controller('DemoCtrl', function ($scope) {
           donation: 19.99
       };
   });
+
+routerApp.controller('AppCtrl', function ($scope) {
+    $scope.myDate = new Date();
+
+    $scope.minDate = new Date(
+      $scope.myDate.getFullYear(),
+      $scope.myDate.getMonth() - 2,
+      $scope.myDate.getDate());
+
+    $scope.maxDate = new Date(
+      $scope.myDate.getFullYear(),
+      $scope.myDate.getMonth() + 2,
+      $scope.myDate.getDate());
+
+})
+
 
 //Controlador validacio
 routerApp.controller('mainController', function ($scope) {
@@ -944,17 +977,3 @@ routerApp.controller('micontrolador', function ($scope) {
         angular.element('#nombre').focus();
     }
 });
-
-
-//.state('home.detail', {
-//    url: '/detail',
-//    params: {
-//        telefonoSeleccionat: {}
-//     },
-//    templateUrl: '/phone-detail/phone-detail.html',
-//    controller: function ($stateParams, $scope) {
-
-//        $scope.phone = $stateParams.telefonoSeleccionat;
-//    }
-
-//})

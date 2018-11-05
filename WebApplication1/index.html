@@ -21,8 +21,7 @@
     <script src="Scripts/angular-material.js"></script>
     <script src="app.js"></script>
     <script src="app.animations.js"></script>
-
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular-aria.min.js"></script>
+    <script src="Scripts/angular-aria.min.js"></script>
 
     <script src="//cdnjs.cloudflare.com/ajax/libs/angular-material-icons/0.7.1/angular-material-icons.min.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/SVG-Morpheus/0.3.2/svg-morpheus.js"></script>
@@ -40,7 +39,6 @@
                     <md-icon md-font-set="material-icons">menu</md-icon>
                 </md-button>
                 <h2>
-                    
                     <span style="margin-left: 30px;" >Telephone List</span>
                     <md-icon md-font-set="material-icons">phone_iphone</md-icon>
                 </h2>
@@ -49,6 +47,9 @@
                 <md-button class="md-icon-button" aria-label="Favorite">
                     <md-icon md-font-set="material-icons">more_vert</md-icon>
                 </md-button>
+                <div ng-controller="AppCtrl" style="padding-right: 40px" class="datepickerdemoBasicUsage" ng-app="MyApp">
+                        <md-datepicker ng-model="myDate" md-placeholder="Fecha"></md-datepicker>
+                </div>
             </div>
         </md-toolbar>
 
