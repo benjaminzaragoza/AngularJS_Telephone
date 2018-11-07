@@ -43,6 +43,18 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="DX.Data.Extensions, Version=6.1.1.2, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\DX.Data.Extensions.6.1.1.2\lib\net40\DX.Data.Extensions.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.1\lib\net45\EntityFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.1\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
       <Private>True</Private>
@@ -77,8 +89,17 @@
     <Content Include="Content\angular-material.layouts.ie_fixes.css" />
     <Content Include="Content\angular-material.layouts.min.css" />
     <Content Include="Content\angular-material.min.css" />
+    <Content Include="Controllers\chat1.js" />
+    <Content Include="Controllers\column1Controller.js" />
+    <Content Include="Controllers\column2Controller.js" />
+    <Content Include="Controllers\Grafics.js" />
+    <Content Include="Controllers\list.js" />
+    <Content Include="Controllers\menu.js" />
+    <Content Include="Controllers\scotchController.js" />
+    <Content Include="Controllers\todo.js" />
     <Content Include="form.html" />
     <Content Include="form2.html" />
+    <Content Include="grafic.html" />
     <Content Include="img\chat.png" />
     <Content Include="img\form\google.svg" />
     <Content Include="img\form\smartphone.svg" />
@@ -86,8 +107,10 @@
     <Content Include="img\phone.svg" />
     <Content Include="img\phone1.png" />
     <Content Include="img\user.png" />
+    <Content Include="list.html" />
     <Content Include="messages.html" />
     <Content Include="packages.config" />
+    <Content Include="readme.txt" />
     <Content Include="Scripts\angular-animate.js" />
     <Content Include="Scripts\angular-animate.min.js" />
     <Content Include="Scripts\angular-aria.js" />

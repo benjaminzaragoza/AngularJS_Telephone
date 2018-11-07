@@ -18,3 +18,8 @@ C:\Projects\Solution2\WebApplication1\bin\Microsoft.CodeDom.Providers.DotNetComp
 C:\Projects\Solution2\WebApplication1\obj\Debug\WebApplication1.csprojResolveAssemblyReference.cache
 C:\Projects\Solution2\WebApplication1\obj\Debug\WebApplication1.dll
 C:\Projects\Solution2\WebApplication1\obj\Debug\WebApplication1.pdb
+C:\Projects\Solution2\WebApplication1\bin\DX.Data.Extensions.dll
+C:\Projects\Solution2\WebApplication1\bin\EntityFramework.dll
+C:\Projects\Solution2\WebApplication1\bin\EntityFramework.SqlServer.dll
+C:\Projects\Solution2\WebApplication1\bin\EntityFramework.xml
+C:\Projects\Solution2\WebApplication1\bin\EntityFramework.SqlServer.xml

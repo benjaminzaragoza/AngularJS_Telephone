@@ -44,6 +44,9 @@ dd {
     background: none;
     margin-right: 710px
 }
+.input.md-datepicker-input {
+    color:white !important;
+}
 .phones li {
   clear: both;
   height: 115px;
