@@ -1,0 +1,55 @@
+﻿<div ng-controller="menu" layout="column" ng-cloak>
+    <md-toolbar class="md-hue-2">
+        <div class="md-toolbar-tools">
+            <md-button class="md-icon-button" aria-label="Settings" ng-click="toggleLeft()">
+                <md-icon md-font-set="material-icons">menu</md-icon>
+            </md-button>
+            <h2>
+                <span style="margin-left: 30px;">Telephone List</span>
+                <md-icon md-font-set="material-icons">phone_iphone</md-icon>
+            </h2>
+            <span flex></span>
+
+            <md-button class="md-icon-button" aria-label="Favorite">
+                <md-icon md-font-set="material-icons">more_vert</md-icon>
+            </md-button>
+
+            <div ng-controller="AppCtrl" style="padding-right: 0px" class="datepickerdemoBasicUsage" ng-app="MyApp">
+                <md-datepicker ng-model="myDate" md-placeholder="Fecha"></md-datepicker>
+            </div>
+            <md-button ua-logout href="#">
+                <md-icon >exit_to_app</md-icon>
+            </md-button>
+        </div>
+    </md-toolbar>
+
+    <md-sidenav class="md-sidenav-left md-whiteframe-z2"
+                md-component-id="left">
+        <md-toolbar class="md-tall md-hue-2" layout-align="end end">
+            <div class="md-toolbar-tools">
+                <img src="https://avatars2.githubusercontent.com/u/23049441?s=460&v=4" width="30" height="30" style="border-radius:50px;margin-right:10px" />
+                <div layout="column">
+                    <span class="md-body-2">Benjamin Zaragoza Pla</span>
+                </div>
+                <span flex></span>
+                <md-button>
+                    <ng-md-icon icon="github-circle" style="fill: white" color="white" size="45"></ng-md-icon>
+                </md-button>
+
+            </div>
+        </md-toolbar>
+
+
+        <md-content role="navigation">
+            <md-list>
+                <md-list-item ng-repeat="item in menu" ui-sref="{{item.state}}" ng-click="close()">
+                    <md-icon md-font-set="material-icons">{{item.icon}}</md-icon>
+                    <span class="md-body-2">{{item.name}}</span>
+                    <span flex></span>
+                    <md-icon>chevron_right</md-icon>
+                </md-list-item>
+            </md-list>
+        </md-content>
+
+    </md-sidenav>
+</div>

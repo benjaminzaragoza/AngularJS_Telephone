@@ -2,6 +2,7 @@
 <html>
 <head>
     <!-- CSS (load bootstrap) -->
+    <link rel="icon" type="image/x-icon" href="img/phone2.png" />
 
     <link rel="stylesheet" href="app.css" />
     <link rel="stylesheet" href="app.animations.css" />
@@ -30,10 +31,12 @@
     <script src="app.js"></script>
     <script src="app.animations.js"></script>
     <script src="Scripts/angular-aria.min.js"></script>
+    <script data-require="angular-cookies@*" data-semver="1.4.3" src="https://code.angularjs.org/1.4.3/angular-cookies.js"></script>
 
     <script src="//cdnjs.cloudflare.com/ajax/libs/angular-material-icons/0.7.1/angular-material-icons.min.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/SVG-Morpheus/0.3.2/svg-morpheus.js"></script>
-
+    <script src="Controllers/login.controller.js"></script>
+    <script src="Controllers/login.service.js"></script>
     <script src="Controllers/menu.js"></script>
 
     <script src="Controllers/todo.js"></script>
@@ -53,58 +56,8 @@
 <body ng-app="routerApp">
 
     <!--Menu de navegacio -->
-    <div ng-controller="menu" layout="column" ng-cloak>
-        <md-toolbar class="md-hue-2">
-            <div class="md-toolbar-tools">
-                <md-button class="md-icon-button" aria-label="Settings" ng-click="toggleLeft()">
-                    <md-icon md-font-set="material-icons">menu</md-icon>
-                </md-button>
-                <h2>
-                    <span style="margin-left: 30px;" >Telephone List</span>
-                    <md-icon md-font-set="material-icons">phone_iphone</md-icon>
-                </h2>
-                <span flex></span>
-
-                <md-button class="md-icon-button" aria-label="Favorite">
-                    <md-icon md-font-set="material-icons">more_vert</md-icon>
-                </md-button>
-                <div ng-controller="AppCtrl" style="padding-right: 40px" class="datepickerdemoBasicUsage" ng-app="MyApp">
-                        <md-datepicker ng-model="myDate" md-placeholder="Fecha"></md-datepicker>
-                </div>
-            </div>
-        </md-toolbar>
-
-
-            <md-sidenav class="md-sidenav-left md-whiteframe-z2"
-                        md-component-id="left">
-                <md-toolbar class="md-tall md-hue-2" layout-align="end end">
-
-                    <div class="md-toolbar-tools">
-                        <img src="https://avatars2.githubusercontent.com/u/23049441?s=460&v=4" width="30" height="30" style="border-radius:50px;margin-right:10px" />
-                        <div layout="column">
-                            <span class="md-body-2">Benjamin Zaragoza</span>
-                        </div>
-                        <span flex></span>
-                            <ng-md-icon icon="github-circle" style="fill: white" color="white" size="45"></ng-md-icon>
-                    </div>
-                </md-toolbar>
-
-
-                <md-content role="navigation">
-                    <md-list>
-                        <md-list-item ng-repeat="item in menu"  ui-sref="{{item.state}}" ng-click="close()">
-                            <md-icon md-font-set="material-icons">{{item.icon}}</md-icon>
-                            <span class="md-body-2">{{item.name}}</span>
-                            <span flex></span>
-                            <md-icon>chevron_right</md-icon>
-                        </md-list-item>
-                        </md-list>
-                </md-content>
-
-
-
-            </md-sidenav>
-
+    <div>
+    <nav ng-include="'menu.html'" ng-if="location.path() !== '/login'"></nav>
             <md-content flex layout-padding>
                 <div layout="column" layout-fill layout-align="top left">
                     <div class="container">
@@ -121,12 +74,12 @@
 
 
     <!-- Contenidor baix (footer) -->
-    <div style="color:#162593;" class="footer">
+    <!--<div style="color:#162593;" class="footer">
         <md-toolbar class="md-scroll-shrink">
             <div layout="row" layout-align="center center" flex>
                 <p>Aangular by Benjamin Zaragoza ... <a href="https://github.com/benjaminzaragoza" target="_blank">more info</a></p>
             </div>
         </md-toolbar>
-    </div>
+    </div>-->
 </body>
 </html>

@@ -1,11 +1,15 @@
-﻿var routerApp = angular.module('routerApp', ['ngAnimate', 'ui.router', 'core', 'ngMaterial', 'ngMessages', 'ngMdIcons', 'dx']);
+﻿var routerApp = angular.module('routerApp', ['ngAnimate', 'ui.router', 'core', 'ngMaterial', 'ngMessages', 'ngMdIcons', 'dx', 'ngAria', 'ngCookies']);
 
 routerApp.config(function ($stateProvider, $urlRouterProvider,$mdDateLocaleProvider) {
 
-    $urlRouterProvider.otherwise('/home');
+    $urlRouterProvider.otherwise('/login');
 
     $stateProvider
-
+         .state('login', {
+           url: '/login',
+           templateUrl: 'login.html',
+           controller: 'LoginController as vm'
+        })
         .state('home', {
             url: '/home',
             templateUrl: 'partial-home.html'
@@ -93,7 +97,24 @@ routerApp.config(function ($stateProvider, $urlRouterProvider,$mdDateLocaleProvi
     
 
 });
+routerApp.run(['$rootScope', '$location', '$cookieStore', '$http',
+    function($rootScope, $location, $cookieStore, $http) {
+        // keep user logged in after page refresh
+        $rootScope.globals = $cookieStore.get('globals') || {};
+        if ($rootScope.globals.currentUser) {
+            console.log('Page refresh');
+            $http.defaults.headers.common['Authorization'] = 'Basic ' + $rootScope.globals.currentUser.authdata; // jshint ignore:line
+        }
 
+        $rootScope.$on('$locationChangeStart', function(event, next, current) {
+            // redirect to login page if not logged in
+            if ($location.path() !== '/login' && !$rootScope.globals.currentUser) {
+                console.log('Do not go back');
+                $location.path('/login');
+            }
+        });
+    }
+]);
 routerApp.controller('DemoCtrl', function ($scope) {
       $scope.user = {
           name: 'John Doe',
@@ -102,7 +123,11 @@ routerApp.controller('DemoCtrl', function ($scope) {
           address: 'Mountain View, CA',
           donation: 19.99
       };
-  });
+});
+
+routerApp.run(function ($rootScope, $location) {
+    $rootScope.location = $location;
+});
 
 routerApp.controller('AppCtrl', function ($scope) {
     $scope.myDate = new Date();

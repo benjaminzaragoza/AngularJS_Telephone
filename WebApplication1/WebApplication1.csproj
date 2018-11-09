@@ -106,6 +106,7 @@
     <Content Include="img\form\user.svg" />
     <Content Include="img\phone.svg" />
     <Content Include="img\phone1.png" />
+    <Content Include="img\phone2.png" />
     <Content Include="img\user.png" />
     <Content Include="list.html" />
     <Content Include="messages.html" />

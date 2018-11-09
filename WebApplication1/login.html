@@ -1,0 +1,34 @@
+﻿
+<div>
+
+    <form name="myForm" class="login" ng-submit="vm.login(loginObj)" layout="row" layout-wrap>
+
+
+        <md-input-container class="login" flex="100">
+            <md-icon class="md-dark" aria-label="Username">person</md-icon>
+            <input name="username" id="username"  placeholder="Username" ng-model="loginObj.username" ng-required="true">
+
+            <div ng-messages="myForm.username.$error" ng-show="myForm.username.$touched">
+                <div ng-message="required">Username is required.</div>
+            </div>
+        </md-input-container>
+        <md-input-container class="login" flex="100">
+            <md-icon class="md-dark" arial-label="password">lock</md-icon>
+
+            <input placeholder="Password" name="password" id="password" type="password" ng-model="loginObj.password" ng-required="true">
+            <div ng-messages="myForm.password.$error" ng-show="myForm.password.$touched">
+                <div ng-message="required">Password is required.</div>
+            </div>
+        </md-input-container>
+        <div flex="100">
+            <!--<md-button type="button" ng-click="vm.reset()">RESET</md-button>-->
+
+            <md-button type="submit" class="md-primary md-raised" ng-disabled="myForm.$invalid" style="">
+                Login
+            </md-button>
+            <span flex></span>
+ 
+        </div>
+    </form>
+    <div ng-show="vm.loginError" class="alert alert-danger alert-center">{{vm.error}}</div>
+</div>
