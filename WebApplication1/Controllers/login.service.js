@@ -7,7 +7,7 @@
 		    service.Login = function (username, password, fetchedUsername, fetchedPassword, callback) {
 		        var response = { success: username === fetchedUsername && password === fetchedPassword };
 		        if (!response.success) {
-		            response.error = "Username or password incorrect";
+		            response.error = "Nom d'usuari o contrasenya incorrectes";
 		        }
 		        callback(response);
 		    };
