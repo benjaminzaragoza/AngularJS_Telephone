@@ -4,7 +4,7 @@
                 {
                     "age": 0,
                     "id": "motorola-xoom-with-wi-fi",
-                    "imageUrl": "img/phones/motorola-xoom-with-wi-fi.0.jpg",
+                    "imageUrl": "views/img/phones/motorola-xoom-with-wi-fi.0.jpg",
                     "name": "Motorola XOOM\u2122 with Wi-Fi",
                     "snippet": "The Next, Next Generation\r\n\r\nExperience the future with Motorola XOOM with Wi-Fi, the world's first tablet powered by Android 3.0 (Honeycomb).",
                     "additionalFeatures": "Sensors: proximity, ambient light, barometer, gyroscope",
@@ -50,12 +50,12 @@
                     },
                     "id": "motorola-xoom-with-wi-fi",
                     "images": [
-                        "img/phones/motorola-xoom-with-wi-fi.0.jpg",
-                        "img/phones/motorola-xoom-with-wi-fi.1.jpg",
-                        "img/phones/motorola-xoom-with-wi-fi.2.jpg",
-                        "img/phones/motorola-xoom-with-wi-fi.3.jpg",
-                        "img/phones/motorola-xoom-with-wi-fi.4.jpg",
-                        "img/phones/motorola-xoom-with-wi-fi.5.jpg"
+                        "views/views/img/phones/motorola-xoom-with-wi-fi.0.jpg",
+                        "views/img/phones/motorola-xoom-with-wi-fi.1.jpg",
+                        "views/img/phones/motorola-xoom-with-wi-fi.2.jpg",
+                        "views/img/phones/motorola-xoom-with-wi-fi.3.jpg",
+                        "views/img/phones/motorola-xoom-with-wi-fi.4.jpg",
+                        "views/img/phones/motorola-xoom-with-wi-fi.5.jpg"
                     ],
                     "name": "Motorola XOOM\u2122 with Wi-Fi",
                     "sizeAndWeight": {
@@ -76,7 +76,7 @@
                 {
                     "age": 1,
                     "id": "motorola-xoom",
-                    "imageUrl": "img/phones/motorola-xoom.0.jpg",
+                    "imageUrl": "views/img/phones/motorola-xoom.0.jpg",
                     "name": "MOTOROLA XOOM\u2122",
                     "snippet": "The Next, Next Generation\n\nExperience the future with MOTOROLA XOOM, the world's first tablet powered by Android 3.0 (Honeycomb).",
                     "additionalFeatures": "Front-facing camera. Sensors: proximity, ambient light, barometer, gyroscope.",
@@ -122,9 +122,9 @@
                     },
                     "id": "motorola-xoom",
                     "images": [
-                        "img/phones/motorola-xoom.0.jpg",
-                        "img/phones/motorola-xoom.1.jpg",
-                        "img/phones/motorola-xoom.2.jpg"
+                        "views/img/phones/motorola-xoom.0.jpg",
+                        "views/img/phones/motorola-xoom.1.jpg",
+                        "views/img/phones/motorola-xoom.2.jpg"
                     ],
                     "name": "MOTOROLA XOOM\u2122",
                     "sizeAndWeight": {
@@ -145,7 +145,7 @@
                    "age": 2,
                    "carrier": "AT&T",
                    "id": "motorola-atrix-4g",
-                   "imageUrl": "img/phones/motorola-atrix-4g.0.jpg",
+                   "imageUrl": "views/img/phones/motorola-atrix-4g.0.jpg",
                    "name": "MOTOROLA ATRIX\u2122 4G",
                    "snippet": "MOTOROLA ATRIX 4G the world's most powerful smartphone.",
                    "additionalFeatures": "",
@@ -190,10 +190,10 @@
                    },
                    "id": "motorola-atrix-4g",
                    "images": [
-                       "img/phones/motorola-atrix-4g.0.jpg",
-                       "img/phones/motorola-atrix-4g.1.jpg",
-                       "img/phones/motorola-atrix-4g.2.jpg",
-                       "img/phones/motorola-atrix-4g.3.jpg"
+                       "views/img/phones/motorola-atrix-4g.0.jpg",
+                       "views/img/phones/motorola-atrix-4g.1.jpg",
+                       "views/img/phones/motorola-atrix-4g.2.jpg",
+                       "views/img/phones/motorola-atrix-4g.3.jpg"
                    ],
                    "name": "MOTOROLA ATRIX\u2122 4G",
                    "sizeAndWeight": {
@@ -212,7 +212,7 @@
                {
                    "age": 3,
                    "id": "dell-streak-7",
-                   "imageUrl": "img/phones/dell-streak-7.0.jpg",
+                   "imageUrl": "views/img/phones/dell-streak-7.0.jpg",
                    "name": "Dell Streak 7",
                    "snippet": "Introducing Dell\u2122 Streak 7. Share photos, videos and movies together. It\u2019s small enough to carry around, big enough to gather around.",
                    "additionalFeatures": "Front Facing 1.3MP Camera",
@@ -258,11 +258,11 @@
                    },
                    "id": "dell-streak-7",
                    "images": [
-                       "img/phones/dell-streak-7.0.jpg",
-                       "img/phones/dell-streak-7.1.jpg",
-                       "img/phones/dell-streak-7.2.jpg",
-                       "img/phones/dell-streak-7.3.jpg",
-                       "img/phones/dell-streak-7.4.jpg"
+                       "views/img/phones/dell-streak-7.0.jpg",
+                       "views/img/phones/dell-streak-7.1.jpg",
+                       "views/img/phones/dell-streak-7.2.jpg",
+                       "views/img/phones/dell-streak-7.3.jpg",
+                       "views/img/phones/dell-streak-7.4.jpg"
                    ],
                    "name": "Dell Streak 7",
                    "sizeAndWeight": {
@@ -282,7 +282,7 @@
                    "age": 4,
                    "carrier": "Cellular South",
                    "id": "samsung-gem",
-                   "imageUrl": "img/phones/samsung-gem.0.jpg",
+                   "imageUrl": "views/img/phones/samsung-gem.0.jpg",
                    "name": "Samsung Gem\u2122",
                    "snippet": "The Samsung Gem\u2122 brings you everything that you would expect and more from a touch display smart phone \u2013 more apps, more features and a more affordable price."
                , "additionalFeatures": "3.2\u201d Full touch screen with Advanced anti smudge, anti reflective and anti scratch glass; Swype text input for easy and fast message creation; multiple messaging options, including text with threaded messaging for organized, easy-to-follow text; Social Community support, including Facebook and MySpace; Next generation Address book; Visual Voice Mail\n",
@@ -327,9 +327,9 @@
                    },
                    "id": "samsung-gem",
                    "images": [
-                       "img/phones/samsung-gem.0.jpg",
-                       "img/phones/samsung-gem.1.jpg",
-                       "img/phones/samsung-gem.2.jpg"
+                       "views/img/phones/samsung-gem.0.jpg",
+                       "views/img/phones/samsung-gem.1.jpg",
+                       "views/img/phones/samsung-gem.2.jpg"
                    ],
                    "name": "Samsung Gem\u2122",
                    "sizeAndWeight": {
@@ -349,7 +349,7 @@
                    "age": 5,
                    "carrier": "Dell",
                    "id": "dell-venue",
-                   "imageUrl": "img/phones/dell-venue.0.jpg",
+                   "imageUrl": "views/img/phones/dell-venue.0.jpg",
                    "name": "Dell Venue",
                    "snippet": "The Dell Venue; Your Personal Express Lane to Everything"
                , "additionalFeatures": "Gorilla Glass display, Dedicated Camera Key, Ring Silence Switch, Swype keyboard.",
@@ -397,12 +397,12 @@
                    },
                    "id": "dell-venue",
                    "images": [
-                       "img/phones/dell-venue.0.jpg",
-                       "img/phones/dell-venue.1.jpg",
-                       "img/phones/dell-venue.2.jpg",
-                       "img/phones/dell-venue.3.jpg",
-                       "img/phones/dell-venue.4.jpg",
-                       "img/phones/dell-venue.5.jpg"
+                       "views/img/phones/dell-venue.0.jpg",
+                       "views/img/phones/dell-venue.1.jpg",
+                       "views/img/phones/dell-venue.2.jpg",
+                       "views/img/phones/dell-venue.3.jpg",
+                       "views/img/phones/dell-venue.4.jpg",
+                       "views/img/phones/dell-venue.5.jpg"
                    ],
                    "name": "Dell Venue",
                    "sizeAndWeight": {
@@ -422,7 +422,7 @@
                    "age": 6,
                    "carrier": "Best Buy",
                    "id": "nexus-s",
-                   "imageUrl": "img/phones/nexus-s.0.jpg",
+                   "imageUrl": "views/img/phones/nexus-s.0.jpg",
                    "name": "Nexus S",
                    "snippet": "Fast just got faster with Nexus S. A pure Google experience, Nexus S is the first phone to run Gingerbread (Android 2.3), the fastest version of Android yet."
                , "additionalFeatures": "Contour Display, Near Field Communications (NFC), Three-axis gyroscope, Anti-fingerprint display coating, Internet Calling support (VoIP/SIP)",
@@ -474,10 +474,10 @@
                    },
                    "id": "nexus-s",
                    "images": [
-                       "img/phones/nexus-s.0.jpg",
-                       "img/phones/nexus-s.1.jpg",
-                       "img/phones/nexus-s.2.jpg",
-                       "img/phones/nexus-s.3.jpg"
+                       "views/img/phones/nexus-s.0.jpg",
+                       "views/img/phones/nexus-s.1.jpg",
+                       "views/img/phones/nexus-s.2.jpg",
+                       "views/img/phones/nexus-s.3.jpg"
                    ],
                    "name": "Nexus S",
                    "sizeAndWeight": {
@@ -497,7 +497,7 @@
                    "age": 7,
                    "carrier": "Cellular South",
                    "id": "lg-axis",
-                   "imageUrl": "img/phones/lg-axis.0.jpg",
+                   "imageUrl": "views/img/phones/lg-axis.0.jpg",
                    "name": "LG Axis",
                    "snippet": "Android Powered, Google Maps Navigation, 5 Customizable Home Screens"
                , "additionalFeatures": "Accessibility features: Tactile QWERTY keyboard, four-direction keypad, start and end call buttons, dedicated number keys, camera button, TalkBack screen reader",
@@ -543,9 +543,9 @@
                    },
                    "id": "lg-axis",
                    "images": [
-                       "img/phones/lg-axis.0.jpg",
-                       "img/phones/lg-axis.1.jpg",
-                       "img/phones/lg-axis.2.jpg"
+                       "views/img/phones/lg-axis.0.jpg",
+                       "views/img/phones/lg-axis.1.jpg",
+                       "views/img/phones/lg-axis.2.jpg"
                    ],
                    "name": "LG Axis",
                    "sizeAndWeight": {
@@ -564,7 +564,7 @@
                {
                    "age": 8,
                    "id": "samsung-galaxy-tab",
-                   "imageUrl": "img/phones/samsung-galaxy-tab.0.jpg",
+                   "imageUrl": "views/img/phones/samsung-galaxy-tab.0.jpg",
                    "name": "Samsung Galaxy Tab\u2122",
                    "snippet": "Feel Free to Tab\u2122. The Samsung Galaxy Tab\u2122 brings you an ultra-mobile entertainment experience through its 7\u201d display, high-power processor and Adobe\u00ae Flash\u00ae Player compatibility."
                , "additionalFeatures": "Adobe\u00ae Flash\u00ae Player compatible; 1.3MP front-facing camera for video chat; eReader pre-loaded; Swype text input technology\r\n",
@@ -613,13 +613,13 @@
                    },
                    "id": "samsung-galaxy-tab",
                    "images": [
-                       "img/phones/samsung-galaxy-tab.0.jpg",
-                       "img/phones/samsung-galaxy-tab.1.jpg",
-                       "img/phones/samsung-galaxy-tab.2.jpg",
-                       "img/phones/samsung-galaxy-tab.3.jpg",
-                       "img/phones/samsung-galaxy-tab.4.jpg",
-                       "img/phones/samsung-galaxy-tab.5.jpg",
-                       "img/phones/samsung-galaxy-tab.6.jpg"
+                       "views/img/phones/samsung-galaxy-tab.0.jpg",
+                       "views/img/phones/samsung-galaxy-tab.1.jpg",
+                       "views/img/phones/samsung-galaxy-tab.2.jpg",
+                       "views/img/phones/samsung-galaxy-tab.3.jpg",
+                       "views/img/phones/samsung-galaxy-tab.4.jpg",
+                       "views/img/phones/samsung-galaxy-tab.5.jpg",
+                       "views/img/phones/samsung-galaxy-tab.6.jpg"
                    ],
                    "name": "Samsung Galaxy Tab\u2122",
                    "sizeAndWeight": {

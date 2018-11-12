@@ -2,14 +2,9 @@
 <head>
     <!-- CSS -->
     <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css" />
-    <style>
-        body {
-        }
-    </style>
 
-    <!-- JS -->
-    <script src="https://code.angularjs.org/1.4.0-rc.1/angular.js"></script>
-    <script src="app.js"></script>
+    <title>Register 1</title>
+
 </head>
 
 <body>
@@ -28,18 +23,18 @@
                 <md-input-container class="md-icon-float md-block">
                     <!-- Use floating label instead of placeholder -->
                     <label>Name</label>
-                    <md-icon md-svg-src="img/form/user.svg" class="name"></md-icon>
+                    <md-icon md-svg-src="views/img/form/user.svg" class="name"></md-icon>
                     <input ng-model="user.name" type="text">
                 </md-input-container>
 
                 <md-input-container md-no-float="" class="md-block">
-                    <md-icon md-svg-src="img/form/smartphone.svg"></md-icon>
+                    <md-icon md-svg-src="views/img/form/smartphone.svg"></md-icon>
                     <input ng-model="user.phone" type="text" placeholder="Phone Number">
                 </md-input-container>
 
                 <md-input-container class="md-block">
                     <!-- Use floating placeholder instead of label -->
-                    <md-icon md-svg-src="img/form/google.svg" class="email"></md-icon>
+                    <md-icon md-svg-src="views/img/form/google.svg" class="email"></md-icon>
                     <input ng-model="user.email" type="email" placeholder="Email (required)" ng-required="true">
                 </md-input-container>
 

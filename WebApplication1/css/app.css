@@ -5,10 +5,7 @@ h1 {
   border-bottom: 1px solid gray;
   margin-top: 6;
 }
- .logo-image {
-   height: 100%;
-   width: 100%;
- }
+
  .md-button.logo {
    height: 7rem;
    width: 7rem;
@@ -306,4 +303,10 @@ form.login {
 
 .md-table-pagination .label {
   color: rgba(0, 0, 0, 87%) !important;
+}
+
+.responsive {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
 }

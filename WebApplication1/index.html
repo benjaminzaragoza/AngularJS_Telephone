@@ -2,11 +2,12 @@
 <html>
 <head>
     <!-- CSS (load bootstrap) -->
-    <link rel="icon" type="image/x-icon" href="img/phone2.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/x-icon" href="views/img/phone2.png" />
 
-    <link rel="stylesheet" href="app.css" />
-    <link rel="stylesheet" href="app.animations.css" />
-    <link rel="stylesheet" href="Content/angular-material.css"/>
+    <link rel="stylesheet" href="css/app.css" />
+    <link rel="stylesheet" href="css/app.animations.css" />
+    <link rel="stylesheet" href="lib/angular-material.css"/>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
     <style>
@@ -14,7 +15,7 @@
     </style>
 
     <!-- JS (load angular, ui-router, and our custom js file) -->
-    <script src="Scripts/angular.js"></script>
+    <script src="lib/Scripts/angular.js"></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/knockout/3.4.0/knockout-min.js"></script>
     <!-- DevExtreme themes -->
     <link rel="stylesheet" type="text/css" href="https://cdn3.devexpress.com/jslib/18.1.7/css/dx.common.css" />
@@ -25,29 +26,26 @@
     <script type="text/javascript" src="https://cdn3.devexpress.com/jslib/18.1.7/js/dx.all.js"></script>
     <script src="http://unpkg.com/@uirouter/angularjs/release/angular-ui-router.min.js"></script>
     <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.4.0/angular-messages.js"></script>
-    <script src="core/checkmark.filter.js"></script>
-    <script src="Scripts/angular-animate.min.js"></script>
-    <script src="Scripts/angular-material.js"></script>
+    <script src="js/Core/checkmark.filter.js"></script>
+    <script src="lib/Scripts/angular-animate.min.js"></script>
+    <script src="lib/Scripts/angular-material.js"></script>
     <script src="app.js"></script>
-    <script src="app.animations.js"></script>
-    <script src="Scripts/angular-aria.min.js"></script>
+    <script src="js/Animations/app.animations.js"></script>
+    <script src="lib/Scripts/angular-aria.min.js"></script>
     <script data-require="angular-cookies@*" data-semver="1.4.3" src="https://code.angularjs.org/1.4.3/angular-cookies.js"></script>
 
     <script src="//cdnjs.cloudflare.com/ajax/libs/angular-material-icons/0.7.1/angular-material-icons.min.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/SVG-Morpheus/0.3.2/svg-morpheus.js"></script>
-    <script src="Controllers/login.controller.js"></script>
-    <script src="Controllers/login.service.js"></script>
-    <script src="Controllers/menu.js"></script>
 
-    <script src="Controllers/todo.js"></script>
-    <script src="Controllers/chat1.js"></script>
-    <script src="Controllers/column1Controller.js"></script>
-    <script src="Controllers/column2Controller.js"></script>
-    <script src="Controllers/scotchController.js"></script>
-    <script src="Controllers/Grafics.js"></script>
-    <script src="Controllers/list.js"></script>
-
-
+    <script src="js/Login/login.controller.js"></script>
+    <script src="js/Login/login.service.js"></script>
+    <script src="js/Menu.js"></script>
+    <script src="js/Todo_users.js"></script>
+    <script src="js/Chat_users.js"></script>
+    <script src="js/column1Controller.js"></script>
+    <script src="js/column2Controller.js"></script>
+    <script src="js/Grafics.js"></script>
+    <script src="js/List.js"></script>
 
 
 </head>
@@ -57,7 +55,7 @@
 
     <!--Menu de navegacio -->
     <div>
-    <nav ng-include="'menu.html'" ng-if="location.path() !== '/login'"></nav>
+    <nav ng-include="'/views/menu.html'" ng-if="location.path() !== '/login'"></nav>
             <md-content flex layout-padding >
                 <div layout="column" layout-fill layout-align="top left">
                     <div class="container">

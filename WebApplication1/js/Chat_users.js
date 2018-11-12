@@ -1,6 +1,6 @@
 ﻿angular.module('routerApp').controller('chat1', function ($scope) {
-    var imagePath = 'img/user.png';
-    var telefone = 'img/phone.svg';
+    var imagePath = 'views/img/user.png';
+    var telefone = 'views/img/phone.svg';
 
     //.config(function($mdIconProvider) {
     //    $mdIconProvider

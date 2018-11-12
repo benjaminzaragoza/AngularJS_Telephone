@@ -1,8 +1,8 @@
-﻿    <div>
-
-        <form name="myForm" class="login" ng-submit="vm.login(loginObj)" layout="row" layout-wrap>
+﻿<title>Login</title> 
+<div layout-align="center center">
+        <form name="myForm" class="login" ng-submit="vm.login(loginObj)" layout="row" layout-wrap >
             <br />
-            <md-icon style="-webkit-text-fill-color:blue;margin-top:-6%; font-size:95px;text-align:center;margin-left:35%">face</md-icon><br />
+            <md-icon style="-webkit-text-fill-color:blue;margin-top:-6%; font-size:95px;text-align:center" flex="100">face</md-icon><br />
             <md-input-container class="login" flex="100" style="margin-top:90px">
                 <md-icon class="md-dark" aria-label="Username" style="-webkit-text-fill-color:blue">person</md-icon>
                 <input name="username" id="username" placeholder="Username" ng-model="loginObj.username" ng-required="true">
@@ -20,13 +20,11 @@
                 </div>
             </md-input-container>
             <div>
-                <div flex="100">
                     <!--<md-button type="button" ng-click="vm.reset()">RESET</md-button>-->
 
-                    <md-button type="submit"  class="md-primary md-raised" ng-disabled="myForm.$invalid" style="margin-left: 237%;">
+                    <md-button type="submit" class="md-primary md-raised" ng-disabled="myForm.$invalid" style="margin-left:110px" flex="100">
                         Login
                     </md-button>
-                </div>
             </div>
 
         </form>

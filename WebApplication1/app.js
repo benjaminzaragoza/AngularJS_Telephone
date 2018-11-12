@@ -7,12 +7,12 @@ routerApp.config(function ($stateProvider, $urlRouterProvider,$mdDateLocaleProvi
     $stateProvider
          .state('login', {
            url: '/login',
-           templateUrl: 'login.html',
+           templateUrl: 'views/login.html',
            controller: 'LoginController as vm'
         })
         .state('home', {
             url: '/home',
-            templateUrl: 'partial-home.html'
+            templateUrl: 'views/partial-home.html'
         })
 
         .state('home.list', {
@@ -22,13 +22,13 @@ routerApp.config(function ($stateProvider, $urlRouterProvider,$mdDateLocaleProvi
                         // mostrem atraves de "column1Controller" columna 1 -> llista de telefons
                         'columnOne': {
                                 // destriem la vista que volem mostrar
-                                templateUrl: '/phone-list/phone-list.html',
+                            templateUrl: 'views/Phone-list/phone-list.html',
                                 controller: 'column1Controller'
                            },
                         // mostrem atraves de "column2Controller" columna 2 -> detalls telefon
                         'columnTwo': {
                                 // destriem la vista que volem mostrar
-                                templateUrl: '/phone-detail/phone-detail.html',
+                            templateUrl: 'views/Phone-detail/phone-detail.html',
                                 controller: 'column2Controller'
 
                             }
@@ -44,7 +44,7 @@ routerApp.config(function ($stateProvider, $urlRouterProvider,$mdDateLocaleProvi
             url: '/chat',
             views: {
                 'chat': {
-                    templateUrl: 'chat.html',
+                    templateUrl: 'views/chat.html',
                     controller: 'chat1'
                 }
             }
@@ -52,28 +52,28 @@ routerApp.config(function ($stateProvider, $urlRouterProvider,$mdDateLocaleProvi
 
         .state('about', {
             url: '/about',
-            templateUrl: 'partial-about.html',
+            templateUrl: 'views/partial-about.html',
             controller: 'micontrolador'
         })
         .state('form', {
             url: '/form',
-            templateUrl: 'form.html'
+            templateUrl: 'views/Form/form.html'
         })
         .state('grafic', {
             url: '/grafic',
-            templateUrl: 'grafic.html',
+            templateUrl: 'views/grafic.html',
             controller: 'Controller'
         })
         .state('list', {
             url: '/list',
-            templateUrl: 'list.html',
+            templateUrl: 'views/list.html',
             controller: 'list'
         })
         .state('form2', {
             url: '/form2',
             views: {
                 '': {
-                    templateUrl: 'form2.html'
+                    templateUrl: 'views/Form/form2.html'
                 },
                 controller: 'mainController'
             }
