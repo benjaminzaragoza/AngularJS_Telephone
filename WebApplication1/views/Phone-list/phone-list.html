@@ -1,6 +1,6 @@
 ﻿<div class="container-fluid">
     <div class="row">
-        <div class="col-md-2" style="margin-left:8.5%">
+        <div class="col-md-2" style="margin-left:12.5%">
             <!--Sidebar content-->
 
 
@@ -8,49 +8,54 @@
                 <md-icon class="material-icons">&#xE8B6;</md-icon>
                 <input type="search" placeholder="Search" ng-change="search()" ng-model="query">
             </label>
-            
 
-                <md-card style="width:233px">
-                    <md-card-content style="margin:-20px;margin-left:0px;height:70px;width: 205px;">
-                        <div layout="row" layout-align="space-between center" >
-                            <span>Ordenem?</span>
-                            <md-select ng-model="orderProp" class="md-no-underline">
-                                <md-option value="name">Alphabetical</md-option>
-                                <md-option value="age">Newest</md-option>
-                            </md-select>
-                        </div>
-                    </md-card-content>
-                </md-card>
-            </div>
 
-        </div>
-    <md-content>
-        <section class="cards">
-            <div layout="row" layout-sm="column" layout-align="center" layout-wrap>
-                <md-card flex="33"ng-repeat="phone in phones | filter: query | orderBy:orderProp">
-                    <md-card-header>
-                        <md-card-avatar>
-                            <img src="{{phone.imageUrl}}" />
-                        </md-card-avatar>
-                        <md-card-header-text>
-                            <span class="md-title">AngularJS</span>
-                            <span class="md-subhead">Material</span>
-                        </md-card-header-text>
-                    </md-card-header>
-                    <img ng-src="{{phone.imageUrl}}" alt="Test image" ui-sref="home.list({telefonoSeleccionat: phone})" style="height:120px;width:120px;margin-left:40%">
-                    <div class="card_content">
-                        <br />
-                        <a style="margin-left:18px;font-size:19px" class="md-headline" ui-sref="home.list({telefonoSeleccionat: phone})">{{phone.name}}</a>
-
-                        <md-card-content>
-                            <p style="font-size:15px">
-                                {{phone.snippet}}
-                            </p>
-                        </md-card-content>
+            <md-card style="width:233px">
+                <md-card-content style="margin:-27px;margin-left:1%;height:75px;width: 205px;">
+                    <div layout="row" layout-align="space-between center">
+                        <span>Ordenem?</span>
+                        <md-select ng-model="orderProp" class="md-no-underline">
+                            <md-option value="name">Alphabetical</md-option>
+                            <md-option value="age">Newest</md-option>
+                        </md-select>
                     </div>
-                </md-card>
-                <h1 class="md-display-1" ng-show="(home.articles | filter:searchCard).length == 0">No results!</h1>
-            </div>
-        </section>
+                </md-card-content>
+            </md-card>
+        </div>
+
+    </div>
+    <md-content class="md-padding layout-align-center-center" layout-xs="column" layout="row">
+        <div flex-xs flex-gt-xs="70" layout="column" layout-align="center center">
+            <section class="cards">
+                <div layout="row" layout-sm="column" layout-align="center" layout-wrap>
+                    <md-card flex-xs="100" flex-gt-xs="33" layout-xs ng-repeat="phone in phones | filter: query | orderBy:orderProp">
+
+                        <md-card-header>
+                            <md-card-avatar>
+                                <img src="{{phone.imageUrl}}" />
+                            </md-card-avatar>
+                            <md-card-header-text>
+                                <span class="md-title">AngularJS</span>
+                                <span class="md-subhead">Material</span>
+                            </md-card-header-text>
+                        </md-card-header>
+                        <img style="height:auto;width:80%;margin-left:10%" ng-src="{{phone.imageUrl}}" alt="Test image" ui-sref="home.list({telefonoSeleccionat: phone})">
+                        <div class="card_content">
+                            <br />
+                            <a hide-gt-xs style="margin-left:4%;font-size:1em;text-align:center" class="md-headline" ui-sref="home.list({telefonoSeleccionat: phone})">{{phone.name}}</a>
+                            <a hide-xs show-gt-xs style="margin-left:4%;font-size:1em;text-align:center" class="md-headline" ui-sref="home.list({telefonoSeleccionat: phone})">{{phone.name}}</a>
+
+                            <!--hide-xs show-gt-xs-->
+                            <md-card-content hide-xs show-gt-xs>
+                                <p style="font-size:15px">
+                                    {{phone.snippet}}
+                                </p>
+                            </md-card-content>
+                        </div>
+                    </md-card>
+                    <h1 class="md-display-1" ng-show="(home.articles | filter:searchCard).length == 0">No results!</h1>
+                </div>
+            </section>
+        </div>
     </md-content>
- </div>
+</div>

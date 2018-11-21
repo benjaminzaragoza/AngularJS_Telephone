@@ -1,74 +1,72 @@
-﻿<div ng-controller="menu" layout="column" ng-cloak>
-    <md-toolbar class="md-hue-2">
-        <div class="md-toolbar-tools">
-            <md-button class="md-icon-button" aria-label="Settings" ng-click="toggleLeft()">
-                <md-icon md-font-set="material-icons">menu</md-icon>
-            </md-button>
-            <h2>
-                <span style="margin-left: 30px;">Telephone List</span>
-                <md-icon md-font-set="material-icons">phone_iphone</md-icon>
-            </h2>
-            <span flex></span>
+﻿<div ng-controller="menu" layout="column" ng-cloak="">
+  <md-toolbar>
+    <div class="md-toolbar-tools">
+      <md-button class="md-icon-button" aria-label="Settings" ng-click="toggleLeft()">
+        <md-icon md-font-set="material-icons" ng-style="{color: 'white', 'font-size':'25px', height:'25px'}">menu</md-icon>
+      </md-button>
 
-            <md-button class="md-icon-button" aria-label="Favorite">
+      <md-icon  md-font-set="material-icons" ng-style="{color: 'white', 'font-size':'25px', height:'25px'}">phone_iphone</md-icon>
+
+      <span flex=""></span>
+
+      <!--<md-button class="md-icon-button" aria-label="Favorite">
                 <md-icon md-font-set="material-icons">more_vert</md-icon>
-            </md-button>
+            </md-button>-->
 
-            <div ng-controller="AppCtrl" style="padding-right: 0px" class="datepickerdemoBasicUsage" ng-app="MyApp">
-                <md-datepicker ng-model="myDate" md-placeholder="Fecha"></md-datepicker>
-            </div>
-            <md-button ua-logout href="#">
-                <md-icon >exit_to_app</md-icon>
-            </md-button>
+      <div ng-controller="AppCtrl" style="padding-right: 0px" class="datepickerdemoBasicUsage" ng-app="MyApp">
+        <md-datepicker ng-model="myDate" md-placeholder="Fecha"></md-datepicker>
+      </div>
+      <md-button ua-logout="" href="#">
+        <md-icon ng-style="{color: 'white', 'font-size':'25px', height:'25px'}" >exit_to_app</md-icon>
+      </md-button>
+    </div>
+  </md-toolbar>
+
+  <md-sidenav class="md-sidenav-left md-whiteframe-z2"
+              md-component-id="left">
+    <md-toolbar class="md-tall md-hue-2" layout-align="end end">
+      <div class="md-toolbar-tools">
+        <img src="https://avatars2.githubusercontent.com/u/23049441?s=460&v=4" width="30" height="30" style="border-radius:50px;margin-right:10px" />
+        <div layout="column">
+          <span class="md-body-2">Benjamin Zaragoza Pla</span>
         </div>
+        <span flex=""></span>
+        <md-button>
+          <ng-md-icon icon="github-circle" style="fill: white" color="white" size="45"></ng-md-icon>
+        </md-button>
+
+      </div>
     </md-toolbar>
 
-    <md-sidenav class="md-sidenav-left md-whiteframe-z2"
-                md-component-id="left">
-        <md-toolbar class="md-tall md-hue-2" layout-align="end end">
-            <div class="md-toolbar-tools">
-                <img src="https://avatars2.githubusercontent.com/u/23049441?s=460&v=4" width="30" height="30" style="border-radius:50px;margin-right:10px" />
-                <div layout="column">
-                    <span class="md-body-2">Benjamin Zaragoza Pla</span>
-                </div>
-                <span flex></span>
-                <md-button>
-                    <ng-md-icon icon="github-circle" style="fill: white" color="white" size="45"></ng-md-icon>
-                </md-button>
+    <md-content role="navigation">
 
-            </div>
-        </md-toolbar>
-        
-        <md-content role="navigation">
+      <md-list-item ng-repeat="item in data.menu" ui-sref="{{item.state}}" ng-click="close()">
+        <md-icon md-font-set="material-icons" style="color:blue">{{item.icon}}</md-icon>
+        <span class="md-body-2" style="color:blue">{{item.name}}</span>
+        <span flex=""></span>
+        <md-icon>chevron_right</md-icon>
+      </md-list-item>
 
+      <md-list ng-repeat="section in data.sidenav.sections">
 
-                <md-list-item ng-repeat="item in data.menu" ui-sref="{{item.state}}" ng-click="close()">
-                    <md-icon md-font-set="material-icons" style="color:blue">{{item.icon}}</md-icon>
-                    <span class="md-body-2" style="color:blue">{{item.name}}</span>
-                    <span flex></span>
-                    <md-icon>chevron_right</md-icon>
-                </md-list-item>
+        <md-list-item ng-click="section.expand = !section.expand">
+          <md-icon md-font-set="material-icons" style="color:blue">{{section.icon}}</md-icon>
+          <span class="md-body-2" style="color:blue">{{section.name}}</span>
+          <span flex=""></span>
+          <md-icon class="md-primary md-icon-button">{{section.expand ? 'arrow_drop_up' : 'arrow_drop_down'}}</md-icon>
 
-                <md-list ng-repeat="section in data.sidenav.sections">
+        </md-list-item>
 
-                <md-list-item ng-click="section.expand = !section.expand">
-                    <md-icon md-font-set="material-icons" style="color:blue">{{section.icon}}</md-icon>
-                    <span class="md-body-2" style="color:blue">{{section.name}}</span>
-                    <span flex></span>
-                    <md-icon class="md-primary md-icon-button">{{section.expand ? 'arrow_drop_up' : 'arrow_drop_down'}}</md-icon>
-                
-                </md-list-item>
+        <md-list-item style="margin-left: 15%;" ng-show="section.expand" ng-repeat="action in section.actions" ui-sref="{{action.state}}" ng-click="close()">
+          <md-icon>{{action.icon}}</md-icon>
+          <p class="md-body-2">{{action.name}}</p>
+          <span flex=""></span>
+          <md-icon>chevron_right</md-icon>
+        </md-list-item>
 
-                <md-list-item style="margin-left: 15%;" ng-show="section.expand" ng-repeat="action in section.actions" ui-sref="{{action.state}}" ng-click="close()">
-                    <md-icon>{{action.icon}}</md-icon>
-                    <p class="md-body-2">{{action.name}}</p>
-                    <span flex></span>
-                    <md-icon>chevron_right</md-icon>
-                </md-list-item>
+      </md-content>
 
-</md-content>
-
-        <!--<md-content role="navigation">
+    <!--<md-content role="navigation">
             <md-list>
                 <md-list-item ng-repeat="item in menu" ui-sref="{{item.state}}" ng-click="close()">
                     <md-icon md-font-set="material-icons">{{item.icon}}</md-icon>
@@ -79,5 +77,5 @@
             </md-list>
         </md-content>-->
 
-    </md-sidenav>
+  </md-sidenav>
 </div>

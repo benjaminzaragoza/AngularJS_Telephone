@@ -2,25 +2,31 @@
 <title>Telephone Aplication</title>
 
 <!-- text vaix manu-->
-<div class="jumbotron text-center">
-   
-    
-     <md-card  style="margin-left: 10%; margin-right: 10%; margin-top: 3%; margin-bottom: 3%;" flex="100">
-        <img ng-src="https://fuzzy.ink/stationery/wp-content/uploads/sites/3/2018/06/TOTB-social-media-IMG01.jpg" class="responsive2" alt="Washed Out">
-        <md-card-title>
-            <md-card-title-text>
-                <span class="md-headline">Benvingut a la nostra pagina amb Angular</span>
-            </md-card-title-text>
-            <md-button ui-sref=".list" class="md-icon-button logo" style="height: 80px; width: 80px;">
-                <img class="responsive" src="views/img/phone1.png">
-            </md-button>
+<div class="jumbotron text-center" class="gridListdemoBasicUsage">
 
-            <md-button ui-sref=".chat" class="md-icon-button logo" style="height: 80px; width: 80px;">
-                <img class="responsive " src="views/img/chat.png">
-            </md-button>
+    <md-content class="md-padding layout-align-center-center" layout-xs="column" layout="row">
+        <div flex-xs flex-gt-xs="70" layout="column" layout-align="center center">
+            <md-card>
+                <img ng-src="https://fuzzy.ink/stationery/wp-content/uploads/sites/3/2018/06/TOTB-social-media-IMG01.jpg">
+                <md-card-title>
+                    <md-card-title-text>
+                        <span class="md-headline">Benvingut a la nostra pagina amb Angular</span>
+                    </md-card-title-text>
+                </md-card-title>
+                <md-card-actions layout="row" layout-align="end center">
+                    <md-button ui-sref=".list" class="md-icon-button logo" style="height: 80px; width: 80px;">
+                        <img class="responsive" src="views/img/phone1.png">
+                    </md-button>
 
-        </md-card-title>
-        
+                    <md-button ui-sref=".chat" class="md-icon-button logo" style="height: 80px; width: 80px;">
+                        <img class="responsive " src="views/img/chat.png">
+                    </md-button>
+                </md-card-actions>
+            </md-card>
+
+        </div>
+    </md-content>
+
 
     <!--Enllassos dinte el contenidor-->
 </div>
@@ -29,4 +35,6 @@
 <div ui-view="columnTwo"></div>
 <div ui-view="chat"></div>
 <div ui-view="about"></div>
+
+
 
